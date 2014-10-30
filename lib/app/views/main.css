@@ -1,0 +1,46 @@
+#container { margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: '#4682B4'
+  }
+
+h1 {<p style="text-align:center;"><span style="font-family:Cursive;font-size:48px;font-style:italic;font-weight:bold;text-decoration:underline;text-transform:none;font-variant:small-caps;letter-spacing:20px;color:FF0000;">IdeaBox</span>
+    </p>
+    }
+
+a:link {text-decoration: none}
+
+a:hover {color: red; transition: 1s}
+
+a:visited {color: blue}
+
+.menu-item-price::before {content: "$";}
+
+
+#primary-nav ul {text-align: center}
+
+li {display: inline; margin: 2%; font-weight: bold
+    }
+
+li.menu-item {display: block; margin: 20px}
+
+span.menu-item-description {display: block}
+
+span.menu-item-name { color: #fff;
+                    background-color: #036}
+
+span.menu-item-price {font-weight: bold}
+
+img {float: right; width: 20%}
+
+#information {text-align: center}
+
+#announcements {float: left; width: 20%}
+
+#menu {float: right; width: 60%}
+
+#menu h2 {text-align: center}
+
+#page-footer {text-align: center;
+              clear: both;
+              }

@@ -1,0 +1,36 @@
+<body bgcolor='#4682B4'>
+<p style="text-align:center;"><span style="font-family:Cursive;font-size:100px;font-style:italic;font-weight:bold;text-decoration:underline;text-transform:none;font-variant:small-caps;letter-spacing:15px;color:FF0000;">IdeaBox</span>
+</p>
+<form action='/' method='POST'>
+    Your Idea:
+  <input type="text" name="idea[title]"/><br>
+  Discription:
+  <textarea name="idea[description]"></textarea><br><br>
+  <input type="submit"/>
+</form>
+
+<h3>Existing Ideas</h3>
+
+<ul>
+  <% ideas.each do |idea| %>
+    <li>
+      <%= idea.title %>:</br>
+      <%= idea.description %></br>
+      Ranking: <%= idea.rank %>
+      <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
+        <input type='submit' value="+"/>
+      </form>
+      <form action='/<%= idea.id %>/dislike' method='POST' style="display: inline">
+        <input type='submit' value="-"/>
+      </form>
+      <form action="/<%= idea.id %>/edit">
+        <input type="submit" value="Edit">
+      </form>
+      <form action='/<%= idea.id %>'method='POST' style='display: inline'>
+        <input type="hidden" name="_method" value="DELETE">
+        <input type='submit' value="delete"/>
+      </form>
+    </li>
+  <% end %>
+</ul>
+<p>
